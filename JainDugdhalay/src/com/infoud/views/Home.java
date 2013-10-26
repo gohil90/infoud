@@ -16,16 +16,21 @@ import javax.swing.JSeparator;
 import javax.swing.JScrollPane;
 
 import com.infoud.constants.StringConstants;
+import com.infoud.controller.MainController;
+import com.infoud.model.OrderInfo;
 
 import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.List;
 
 @SuppressWarnings("serial")
 public class Home extends JFrame {
 
 	private JPanel contentPane;
-	private static final int TOTAL_ORDER_INFO_COUNT = 10;
+	private static int TOTAL_ORDER_INFO_COUNT = 10;
+
+	private MainController mainController = new MainController();
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -113,14 +118,19 @@ public class Home extends JFrame {
 		mainOrderPanel.setPreferredSize(new Dimension(550,
 				TOTAL_ORDER_INFO_COUNT * 100));
 
+		List<Object> orderList = mainController.fetchAllOrdersInfo();
+		if (null != orderList)
+			TOTAL_ORDER_INFO_COUNT = orderList.size();
+
 		int i = 0;
 
 		OrderInfoPanel order = null;
 		while (i < TOTAL_ORDER_INFO_COUNT) {
 
 			order = new OrderInfoPanel();
-			order.setCustomerName("Mr. Nishant Jethwa " + (i + 1));
-			order.setOrderAmount((i + 1) * 10000 + " Rs.");
+			OrderInfo orderInfo = (OrderInfo) orderList.get(i);
+			order.setCustomerName(orderInfo.getCustomerName());
+			order.setOrderAmount(orderInfo.getAmount()+"");
 			/* Start changes by Nishant J. */
 			order.setItemName(getItemName(i), itemQuantity(i));
 			/* End changes by Nishant J. */

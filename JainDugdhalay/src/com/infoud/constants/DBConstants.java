@@ -2,6 +2,8 @@ package com.infoud.constants;
 
 public class DBConstants {
 
+	public static final String DB_CONNECTION_URL = "C:/Users/Nilesh Gohil/Desktop/JD_Database.accdb";
+
 	public static final String TABLE_CUSTOMER = "JD_Customer";
 	public static final String COLUMN_CUSTOMER_CID = "Cid";
 	public static final String COLUMN_CUSTOMER_CNAME = "Cname";
