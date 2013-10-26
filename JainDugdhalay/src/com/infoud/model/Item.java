@@ -3,6 +3,7 @@ package com.infoud.model;
 public class Item {
 	private int itemId;
 	private String itemName;
+	private int itemQuantity;
 	private double itemPrice;
 	
 	/**
@@ -40,5 +41,11 @@ public class Item {
 	 */
 	public void setItemPrice(double itemPrice) {
 		this.itemPrice = itemPrice;
+	}
+	public int getItemQuantity() {
+		return itemQuantity;
+	}
+	public void setItemQuantity(int itemQuantity) {
+		this.itemQuantity = itemQuantity;
 	}
 }

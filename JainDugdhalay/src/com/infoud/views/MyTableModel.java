@@ -2,8 +2,6 @@ package com.infoud.views;
 
 import javax.swing.table.AbstractTableModel;
 
-import com.infoud.constants.QueryConstants;
-
 class MyTableModel extends AbstractTableModel {
 	/**
 	 * 

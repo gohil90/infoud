@@ -2,33 +2,30 @@ package com.infoud.views;
 
 import java.awt.Dimension;
 import java.awt.EventQueue;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.TitledBorder;
-
-import javax.swing.JLabel;
 import java.awt.Font;
-
-import javax.swing.JButton;
-import javax.swing.SwingConstants;
-import javax.swing.JSeparator;
-import javax.swing.JScrollPane;
-
-import com.infoud.constants.StringConstants;
-import com.infoud.controller.MainController;
-import com.infoud.model.OrderInfo;
-
 import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
+
+import com.infoud.constants.StringConstants;
+import com.infoud.controller.MainController;
+
 @SuppressWarnings("serial")
 public class Home extends JFrame {
 
 	private JPanel contentPane;
-	private static int TOTAL_ORDER_INFO_COUNT = 10;
+	private static int TOTAL_ORDER_INFO_COUNT = 1;
 
 	private MainController mainController = new MainController();
 
@@ -127,15 +124,15 @@ public class Home extends JFrame {
 		OrderInfoPanel order = null;
 		while (i < TOTAL_ORDER_INFO_COUNT) {
 
-			order = new OrderInfoPanel();
+			/*order = new OrderInfoPanel();
 			OrderInfo orderInfo = (OrderInfo) orderList.get(i);
 			order.setCustomerName(orderInfo.getCustomerName());
 			order.setOrderAmount(orderInfo.getAmount()+"");
-			/* Start changes by Nishant J. */
+			 Start changes by Nishant J. 
 			order.setItemName(getItemName(i), itemQuantity(i));
-			/* End changes by Nishant J. */
+			 End changes by Nishant J. 
 			order.setBorderTitle("21/10 " + (i + 1) + ":00 PM");
-			mainOrderPanel.add(order);
+			mainOrderPanel.add(order);*/
 
 			i++;
 		}

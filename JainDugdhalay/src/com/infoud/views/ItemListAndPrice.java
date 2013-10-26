@@ -13,10 +13,12 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import com.infoud.constants.StringConstants;
+
 import javax.swing.border.TitledBorder;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
+@SuppressWarnings("serial")
 public class ItemListAndPrice extends JFrame {
 
 	private JPanel contentPane;
@@ -51,11 +53,10 @@ public class ItemListAndPrice extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
-		
-		
+
 		setHeader();
 	}
-	
+
 	public void setHeader() {
 		JLabel clientNameTitle = new JLabel(StringConstants.CLIENT_HEADER);
 		clientNameTitle.setHorizontalAlignment(SwingConstants.CENTER);
@@ -84,36 +85,37 @@ public class ItemListAndPrice extends JFrame {
 		JSeparator separator = new JSeparator();
 		separator.setBounds(10, 50, 934, 10);
 		contentPane.add(separator);
-		
+
 		JPanel addItemForm = new JPanel();
-		
+
 		addItemForm.setLayout(null);
-		addItemForm.setBorder(new TitledBorder(null, "ADD ITEM", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		addItemForm.setBorder(new TitledBorder(null, "ADD ITEM",
+				TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		addItemForm.setBounds(649, 66, 295, 165);
 		contentPane.add(addItemForm);
-		
+
 		JLabel lblItemName = new JLabel("Item Name :");
 		lblItemName.setBounds(10, 47, 73, 27);
 		addItemForm.add(lblItemName);
-		
+
 		textField = new JTextField();
 		textField.setBounds(85, 50, 200, 20);
 		addItemForm.add(textField);
 		textField.setColumns(10);
-		
+
 		JLabel lblItemPrice = new JLabel("Item Price :");
 		lblItemPrice.setBounds(10, 85, 73, 27);
 		addItemForm.add(lblItemPrice);
-		
+
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
 		textField_1.setBounds(85, 88, 200, 20);
 		addItemForm.add(textField_1);
-		
+
 		JButton btnReset = new JButton("Reset");
 		btnReset.setBounds(109, 127, 89, 23);
 		addItemForm.add(btnReset);
-		
+
 		JButton btnNewButton = new JButton("Submit");
 		btnNewButton.setBounds(10, 127, 89, 23);
 		addItemForm.add(btnNewButton);

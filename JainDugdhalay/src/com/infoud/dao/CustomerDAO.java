@@ -14,7 +14,7 @@ public class CustomerDAO {
 	DBOperations dbOperations = new DBOperations();
 
 	public List<Object> fetchAllOrdersInfo() {
-		Connection conn = DBConnection.connect();
+		/*Connection conn = DBConnection.connect();
 
 		List<Object> orders = dbOperations.getAllRecordsForModel(
 				QueryConstants.FETCH_ALL_ORDERS_INFO_QUERY, OrderInfo.class,
@@ -22,8 +22,8 @@ public class CustomerDAO {
 
 		System.out.println(QueryConstants.FETCH_ALL_ORDERS_INFO_QUERY);
 
-		DBConnection.close(conn);
-		return orders;
+		DBConnection.close(conn);*/
+		return null;
 	}
 
 }
